@@ -22,7 +22,6 @@ for i in range(10):
     s2 = pd.Series([he.noiseLevel(enc3),  he.decryptInt(enc3), plain3], index=df_mul.columns)
     df_add = df_add.append(s1, ignore_index=True )
     df_mul = df_mul.append(s2, ignore_index=True )
-display(df_add)
-display(df_add.plot(subplots=True, figsize=(9,9)))
-display(df_mul)
-display(df_mul.plot(subplots=True, figsize=(9,9)))
+
+df_add.to_csv("df_add.csv", sep=",")
+df_mul.to_csv("df_mul.csv", sep=",")
