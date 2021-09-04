@@ -11,6 +11,9 @@ RUN sudo apt install python3.7-distutils -y
 RUN python3.7 get-pip.py
 RUN echo 'export PATH=$PATH:$HOME/.local/bin' >> ~/.bashrc
 RUN . ~/.bashrc
+###  !!!! Don't remove this !!!!
+RUN sudo apt-get install build-essential libssl-dev libffi-dev python3-dev
+###
 RUN git clone --recursive https://github.com/ibarrond/Pyfhel
 # RUN pip3.7 install --user pipenv
-RUN cd Pyfhel && pip3 install .
+# RUN cd Pyfhel && pip3 install .
