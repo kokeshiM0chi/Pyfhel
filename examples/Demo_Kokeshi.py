@@ -1,5 +1,6 @@
 import time
 import pandas as pd
+from Pyfhel import Pyfhel, PyPtxt, PyCtxt
 
 he = Pyfhel()           # 空のPyfhelオブジェクトを生成
 he.contextGen(p=65537, m=2**13, flagBatching=True)  #コンテキストを初期化 m=8192
